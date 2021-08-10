@@ -178,6 +178,12 @@ variable "private_subnets" {
   default     = []
 }
 
+variable "private_eks_subnets" {
+  description = "A list of private eks subnets inside the VPC"
+  type        = list(string)
+  default     = []
+}
+
 variable "outpost_subnets" {
   description = "A list of outpost subnets inside the VPC"
   type        = list(string)
@@ -432,6 +438,12 @@ variable "public_subnet_tags" {
 
 variable "private_subnet_tags" {
   description = "Additional tags for the private subnets"
+  type        = map(string)
+  default     = {}
+}
+
+variable "private_eks_subnet_tags" {
+  description = "Additional tags for the private eks subnets"
   type        = map(string)
   default     = {}
 }
