@@ -83,7 +83,7 @@ output "private_subnets_cidr_blocks" {
   value       = aws_subnet.private.*.cidr_block
 }
 
-ouput "private_eks_subnets_cidr_blocks" {
+output "private_eks_subnets_cidr_blocks" {
   description = "List of cidr_blocks of eks private subnets"
   value       = aws_subnet.private_eks.*.cidr_block
 }

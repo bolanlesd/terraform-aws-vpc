@@ -1212,7 +1212,7 @@ resource "aws_route" "private_ipv6_egress" {
 #EKS ipv6_egress
 ##################################################################################
 
-resource "aws_route" "private_ipv6_egress" {
+resource "aws_route" "private_eks_ipv6_egress" {
   count = var.create_vpc && var.create_egress_only_igw && var.enable_ipv6 ? length(var.private_eks_subnets) : 0
 
   route_table_id              = element(aws_route_table.private.*.id, count.index)
