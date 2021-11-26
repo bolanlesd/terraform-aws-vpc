@@ -88,18 +88,39 @@ output "public_eks_subnets_cidr_blocks" {
   value       = aws_subnet.public_eks.*.cidr_block
 }
 
+output "public_eks_subnets_cidr_blocks_green" {
+  description = "List of cidr_blocks of eks public subnets"
+  value       = aws_subnet.public_eks_green.*.cidr_block
+}
+
 output "public_eks_subnets" {
   description = "List of IDs of eks public subnets"
-  value = aws_subnet.public_eks.*.id
+  value       = aws_subnet.public_eks.*.id
 }
+
+output "public_eks_subnets_green" {
+  description = "List of IDs of eks public subnets"
+  value       = aws_subnet.public_eks_green.*.id
+}
+
 output "private_eks_subnets_cidr_blocks" {
   description = "List of cidr_blocks of eks private subnets"
   value       = aws_subnet.private_eks.*.cidr_block
 }
 
+output "private_eks_subnets_cidr_blocks_green" {
+  description = "List of cidr_blocks of eks private subnets"
+  value       = aws_subnet.private_eks_green.*.cidr_block
+}
+
 output "private_eks_subnets" {
   description = "List of IDs of eks private subnets"
-  value = aws_subnet.private_eks.*.id
+  value       = aws_subnet.private_eks.*.id
+}
+
+output "private_eks_subnets_green" {
+  description = "List of IDs of eks private subnets"
+  value       = aws_subnet.private_eks_green.*.id
 }
 
 output "private_subnets_ipv6_cidr_blocks" {
